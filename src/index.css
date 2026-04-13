@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900 transition-colors duration-300;
+  }
+  
+  .dark body {
+    @apply bg-navy-950 text-white;
+  }
+}
+:root {
+  --card-bg: #ffffff;
+  --border-color: #e8eaed;
+  --text-primary: #111;
+  --text-secondary: #555;
+  --section-bg-1: #f0f2f5;
+  --section-bg-2: #eef0f4;
+  --accent-color: #c0392b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-bg: #1a1a1a;
+    --border-color: #333;
+    --text-primary: #eeeeee;
+    --text-secondary: #aaaaaa;
+    --section-bg-1: #121212;
+    --section-bg-2: #1a1a1a;
+    --accent-color: #e04a3f;   /* slightly brighter red for dark mode */
+  }
+}
+
+/* If you toggle dark mode with a class instead */
+.dark {
+  --card-bg: #1a1a1a;
+  --border-color: #333;
+  --text-primary: #eeeeee;
+  --text-secondary: #aaaaaa;
+  --section-bg-1: #121212;
+  --section-bg-2: #1a1a1a;
+  --accent-color: #e04a3f;
+}
+:root {
+  --section-bg: #eef1f8;
+  --card-bg: #ffffff;
+  --border-color: #dde3ec;
+  --text-primary: #0d1e30;
+  --text-secondary: #6b7a8d;
+  --text-quote: #2a3a4a;
+  --avatar-bg: #0d1e30;
+  --avatar-border: #1a3550;
+  --accent-color: #c0392b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --section-bg: #0f172a;
+    --card-bg: #1e2937;
+    --border-color: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-quote: #cbd5e1;
+    --avatar-bg: #1e3a5f;
+    --avatar-border: #3b82f6;
+    --accent-color: #e04a3f;   /* slightly brighter for dark mode */
+  }
+}
+
+/* If you use a class-based toggle */
+.dark {
+  --section-bg: #0f172a;
+  --card-bg: #1e2937;
+  --border-color: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-quote: #cbd5e1;
+  --avatar-bg: #1e3a5f;
+  --avatar-border: #3b82f6;
+  --accent-color: #e04a3f;
+}
