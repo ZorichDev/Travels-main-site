@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import londonImg from './../../../../assets/image/london.jpg';
+import londonImg from '../../../../assets/image/london.jpg';
 import dubaiImg from './../../../../assets/image/Dubai.jpg';
 import accraImg from './../../../../assets/image/Accra.jpg';
 import torontoImg from './../../../../assets/image/Toronto.jpg';
