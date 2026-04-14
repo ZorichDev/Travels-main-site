@@ -5,6 +5,7 @@ import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
 import Home from './pages/Home';
+import About from './pages/Aboutus';  // ← ADD THIS IMPORT
 import Services from './pages/Services';
 import Book from './pages/Book';
 import Visas from './pages/Visas';
@@ -37,6 +38,7 @@ function App() {
           <Navigation />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />  {/* ← ADD THIS ROUTE */}
             <Route path="/services" element={<Services />} />
             <Route path="/book" element={<Book />} />
             <Route path="/visas" element={<Visas />} />

@@ -11,7 +11,7 @@ const Navigation = () => {
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
-  // ✅ Fix 1: Scroll to top on every route change
+  // Scroll to top on every route change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [location.pathname]);
@@ -37,6 +37,7 @@ const Navigation = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },  // ← ADDED ABOUT US HERE
     { name: 'Services', path: '/services', hasDropdown: true },
     { name: 'Contact Us', path: '/contact' },
     { name: 'Blog', path: '/blog' },
@@ -107,7 +108,6 @@ const Navigation = () => {
             alt="R-Pro Travels"
             className="h-8 w-auto md:h-10 object-contain flex-shrink-0"
           />
-          {/* ✅ Fix 2: Tailwind dark: class instead of inline style so dark mode works */}
           <span
             className={`font-serif font-bold text-lg md:text-xl leading-tight tracking-tight transition-colors duration-300 ${
               scrolled ? 'text-gray-900 dark:text-white' : 'text-white'
@@ -201,6 +201,17 @@ const Navigation = () => {
             }`}
           >
             Home
+          </Link>
+
+          {/* About Us Link in Mobile Menu */}
+          <Link
+            to="/about"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`py-3 text-gray-800 dark:text-white font-semibold border-b border-gray-100 dark:border-white/10 ${
+              isActive('/about') ? 'text-red-600' : ''
+            }`}
+          >
+            About Us
           </Link>
 
           <Link

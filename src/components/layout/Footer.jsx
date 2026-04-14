@@ -62,6 +62,7 @@ const Footer = () => {
           </h4>
           <ul className="space-y-3">
             {[
+              { label: 'About Us', to: '/about' },  // ← ADDED ABOUT US HERE
               { label: 'Flight Booking', href: 'https://rprotravels.com', external: true },
               { label: 'Hotel Reservations', href: 'https://rprotravels.com', external: true },
               { label: 'Medical Tourism', to: '/medical' },
