@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Sun, Moon, MessageCircle, Mail, Clock, Plane, FileText, HeartPulse, Globe, Briefcase } from 'lucide-react';
 import { useTheme } from '../../hooks/useTheme';
-import logo from "../../assets/image/tag_logo.png";
+import logo from "./../../assets/image/tag_logo.png";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,6 +10,11 @@ const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
+
+  // ✅ Fix 1: Scroll to top on every route change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -74,7 +79,7 @@ const Navigation = () => {
             {theme === 'light' ? <Moon size={12} /> : <Sun size={12} />}
             <span className="hidden sm:inline">{theme === 'light' ? 'Dark' : 'Light'}</span>
           </button>
-          
+
           <a
             href="https://rprotravels.com"
             target="_blank"
@@ -102,9 +107,11 @@ const Navigation = () => {
             alt="R-Pro Travels"
             className="h-8 w-auto md:h-10 object-contain flex-shrink-0"
           />
+          {/* ✅ Fix 2: Tailwind dark: class instead of inline style so dark mode works */}
           <span
-            className="font-serif font-bold text-lg md:text-xl leading-tight tracking-tight transition-colors duration-300"
-            style={{ color: scrolled ? '#111827' : 'white' }}
+            className={`font-serif font-bold text-lg md:text-xl leading-tight tracking-tight transition-colors duration-300 ${
+              scrolled ? 'text-gray-900 dark:text-white' : 'text-white'
+            }`}
           >
             R-Pro <span className="text-red-600">Travels</span>
           </span>
@@ -257,7 +264,7 @@ const Navigation = () => {
               {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
               {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
             </button>
-            
+
             <a
               href="https://rprotravels.com"
               target="_blank"
