@@ -114,37 +114,37 @@ const ServicesPreview = () => {
       code: 'GB', city: 'London', photo: londonImg,
       gradient: 'linear-gradient(160deg, #0d1b2a 0%, #1a2a3a 50%, #0a1520 100%)',
       flight: '₦850k', visa: '₦250k', visaLabel: 'Visa from',
-      link: '/destinations/london',
+      // link: '/destinations/london',
     },
     {
       code: 'AE', city: 'Dubai', photo: dubaiImg,
       gradient: 'linear-gradient(160deg, #5c4a1e 0%, #8b6914 40%, #3d2e0a 100%)',
       flight: '₦420k', visa: '₦150k', visaLabel: 'Visa from',
-      link: '/destinations/dubai',
+      // link: '/destinations/dubai',
     },
     {
       code: 'CA', city: 'Toronto', photo: torontoImg,
       gradient: 'linear-gradient(160deg, #0a1628 0%, #0d2040 50%, #091525 100%)',
       flight: '₦1.1m', visa: '₦300k', visaLabel: 'Visa from',
-      link: '/destinations/toronto',
+      // link: '/destinations/toronto',
     },
     {
       code: 'US', city: 'New York', photo: newYorkImg,
       gradient: 'linear-gradient(160deg, #111111 0%, #1c1c1c 50%, #080808 100%)',
       flight: '₦980k', visa: '₦280k', visaLabel: 'Visa from',
-      link: '/destinations/new-york',
+      // link: '/destinations/new-york',
     },
     {
       code: 'FR', city: 'Paris', photo: parisImg,
       gradient: 'linear-gradient(160deg, #3d2e0a 0%, #6b4f10 50%, #2a1f06 100%)',
       flight: '₦720k', visa: '₦250k', visaLabel: 'Visa from',
-      link: '/destinations/paris',
+      // link: '/destinations/paris',
     },
     {
       code: 'GH', city: 'Accra', photo: accraImg,
       gradient: 'linear-gradient(160deg, #0a1f0a 0%, #1a3d10 50%, #071408 100%)',
       flight: '₦95k', visa: null, visaLabel: 'Visa-Free',
-      link: '/destinations/accra',
+      // link: '/destinations/accra',
     },
   ];
 
