@@ -37,7 +37,7 @@ const Navigation = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },  // ← ADDED ABOUT US HERE
+    { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/services', hasDropdown: true },
     { name: 'Contact Us', path: '/contact' },
     { name: 'Blog', path: '/blog' },
@@ -46,10 +46,10 @@ const Navigation = () => {
   const isActive = (path) => location.pathname === path;
 
   const linkColor = scrolled
-    ? 'text-gray-800 dark:text-white hover:text-bg-[#ff0909]-600 dark:hover:text-[#ff0909]'
+    ? 'text-gray-800 dark:text-white hover:text-[#ff0909] dark:hover:text-[#ff0909]'
     : 'text-white/90 hover:text-white';
 
-  const activeLinkColor = 'text-bg-[#ff0909]-500';
+  const activeLinkColor = 'text-[#ff0909]';
 
   return (
     <>
@@ -85,7 +85,7 @@ const Navigation = () => {
             href="https://rprotravels.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-bg-[#ff0909]-600 hover:bg-bg-[#ff0909]-700 text-white px-2.5 py-1 rounded text-xs font-bold tracking-wide transition whitespace-nowrap"
+            className="bg-[#ff0909] hover:bg-red-700 text-white px-2.5 py-1 rounded text-xs font-bold tracking-wide transition whitespace-nowrap"
           >
             <span className="hidden sm:inline">Start Your Journey →</span>
             <span className="sm:hidden">Book →</span>
@@ -113,11 +113,11 @@ const Navigation = () => {
               scrolled ? 'text-gray-900 dark:text-white' : 'text-white'
             }`}
           >
-            R-Pro <span className="text-bg-[#ff0909]-600">Travels</span>
+            R-Pro <span className="text-[#ff0909]">Travels</span>
           </span>
         </Link>
 
-        {/* Desktop Nav — centebg-[#ff0909] */}
+        {/* Desktop Nav — centered */}
         <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <div key={link.name} className="relative">
@@ -149,7 +149,7 @@ const Navigation = () => {
                       <Link
                         key={item.name}
                         to={item.path}
-                        className="flex items-center gap-3 w-full px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-bg-[#ff0909]-50 dark:hover:bg-bg-[#ff0909]-900/20 hover:text-bg-[#ff0909]-600 transition rounded-lg"
+                        className="flex items-center gap-3 w-full px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-[#ff0909] transition rounded-lg"
                         onClick={() => setServicesOpen(false)}
                       >
                         {item.icon}
@@ -196,8 +196,8 @@ const Navigation = () => {
           <Link
             to="/"
             onClick={() => setMobileMenuOpen(false)}
-            className={`py-3 text-gray-800 dark:text-white font-semibold border-b border-gray-100 dark:border-white/10 ${
-              isActive('/') ? 'text-bg-[#ff0909]-600' : ''
+            className={`py-3 font-semibold border-b border-gray-100 dark:border-white/10 transition-colors ${
+              isActive('/') ? 'text-[#ff0909]' : 'text-gray-800 dark:text-white'
             }`}
           >
             Home
@@ -207,8 +207,8 @@ const Navigation = () => {
           <Link
             to="/about"
             onClick={() => setMobileMenuOpen(false)}
-            className={`py-3 text-gray-800 dark:text-white font-semibold border-b border-gray-100 dark:border-white/10 ${
-              isActive('/about') ? 'text-bg-[#ff0909]-600' : ''
+            className={`py-3 font-semibold border-b border-gray-100 dark:border-white/10 transition-colors ${
+              isActive('/about') ? 'text-[#ff0909]' : 'text-gray-800 dark:text-white'
             }`}
           >
             About Us
@@ -217,8 +217,8 @@ const Navigation = () => {
           <Link
             to="/services"
             onClick={() => setMobileMenuOpen(false)}
-            className={`py-3 text-gray-800 dark:text-white font-semibold border-b border-gray-100 dark:border-white/10 ${
-              isActive('/services') ? 'text-bg-[#ff0909]-600' : ''
+            className={`py-3 font-semibold border-b border-gray-100 dark:border-white/10 transition-colors ${
+              isActive('/services') ? 'text-[#ff0909]' : 'text-gray-800 dark:text-white'
             }`}
           >
             Services
@@ -226,7 +226,7 @@ const Navigation = () => {
 
           {/* Service sub-items */}
           <div className="pt-2 pb-1">
-            <div className="text-bg-[#ff0909]-600 text-xs font-bold tracking-widest uppercase pl-2 mb-1">
+            <div className="text-[#ff0909] text-xs font-bold tracking-widest uppercase pl-2 mb-1">
               Service Options
             </div>
             {serviceItems.map((item) => (
@@ -236,8 +236,8 @@ const Navigation = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 py-2.5 pl-4 text-sm transition-colors ${
                   isActive(item.path)
-                    ? 'text-bg-[#ff0909]-600'
-                    : 'text-gray-600 dark:text-gray-400 hover:text-bg-[#ff0909]-600'
+                    ? 'text-[#ff0909]'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-[#ff0909]'
                 }`}
               >
                 {item.icon}
@@ -249,8 +249,8 @@ const Navigation = () => {
           <Link
             to="/contact"
             onClick={() => setMobileMenuOpen(false)}
-            className={`py-3 text-gray-800 dark:text-white font-semibold border-t border-gray-100 dark:border-white/10 ${
-              isActive('/contact') ? 'text-bg-[#ff0909]-600' : ''
+            className={`py-3 font-semibold border-t border-gray-100 dark:border-white/10 transition-colors ${
+              isActive('/contact') ? 'text-[#ff0909]' : 'text-gray-800 dark:text-white'
             }`}
           >
             Contact Us
@@ -259,8 +259,8 @@ const Navigation = () => {
           <Link
             to="/blog"
             onClick={() => setMobileMenuOpen(false)}
-            className={`py-3 text-gray-800 dark:text-white font-semibold ${
-              isActive('/blog') ? 'text-bg-[#ff0909]-600' : ''
+            className={`py-3 font-semibold transition-colors ${
+              isActive('/blog') ? 'text-[#ff0909]' : 'text-gray-800 dark:text-white'
             }`}
           >
             Blog
@@ -280,7 +280,7 @@ const Navigation = () => {
               href="https://rprotravels.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-auto bg-bg-[#ff0909]-600 hover:bg-bg-[#ff0909]-700 text-white px-4 py-2 rounded text-sm font-bold transition"
+              className="ml-auto bg-[#ff0909] hover:bg-red-700 text-white px-4 py-2 rounded text-sm font-bold transition"
             >
               Start Journey →
             </a>
