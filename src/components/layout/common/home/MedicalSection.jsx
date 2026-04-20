@@ -114,13 +114,13 @@ const MedicalSection = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-8 h-px bg-red-600"></div>
-            <span className="text-red-600 text-xs font-bold tracking-wider uppercase">Medical Tourism</span>
-            <div className="w-8 h-px bg-red-600"></div>
+            <div className="w-8 h-px bg-bg-[#ff0909]-600"></div>
+            <span className="text-bg-[#ff0909]-600 text-xs font-bold tracking-wider uppercase">Medical Tourism</span>
+            <div className="w-8 h-px bg-bg-[#ff0909]-600"></div>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             World-Class Treatment,<br />
-            <span className="text-red-600 italic">African Roots</span>
+            <span className="text-bg-[#ff0909]-600 italic">African Roots</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
             We match you to the best hospital in 19 countries — and handle every detail from visa to discharge.
@@ -134,7 +134,7 @@ const MedicalSection = () => {
             return (
               <div 
                 key={idx} 
-                className="group bg-white dark:bg-navy-900 rounded-xl overflow-hidden border border-gray-200 dark:border-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-red-500/30"
+                className="group bg-white dark:bg-navy-900 rounded-xl overflow-hidden border border-gray-200 dark:border-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-bg-[#ff0909]-500/30"
               >
                 {/* Header with Flag and Code */}
                 <div className="relative bg-gradient-to-r from-gray-50 to-gray-100 dark:from-navy-800 dark:to-navy-800/50 px-5 py-4 border-b border-gray-200 dark:border-white/10">
@@ -146,7 +146,7 @@ const MedicalSection = () => {
                 
                 {/* Content */}
                 <div className="p-5">
-                  <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-red-600 transition-colors">
+                  <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-bg-[#ff0909]-600 transition-colors">
                     {c.name}
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
@@ -174,7 +174,7 @@ const MedicalSection = () => {
         <div className="text-center mt-12">
           <Link 
             to="/medical"
-            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-bold uppercase tracking-wide transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+            className="inline-flex items-center gap-2 bg-bg-[#ff0909]-600 hover:bg-bg-[#ff0909]-700 text-white px-8 py-3 rounded-lg font-bold uppercase tracking-wide transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
           >
             Explore Medical Tourism →
           </Link>

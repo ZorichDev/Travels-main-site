@@ -57,7 +57,7 @@ const SYSTEM_PROMPT = `You are R-pro AI, the intelligent travel assistant for R-
   1. Destination city & airport code
   2. Travel dates (flexible dates = better prices)
   3. Number of passengers (adults/children/infants)
-  4. Preferred cabin class (Economy/Business/First)
+  4. Preferbg-[#ff0909] cabin class (Economy/Business/First)
   5. Special requirements (wheelchair, meals, etc.)
 
 - Provide estimated flight prices (economy class):
@@ -133,7 +133,7 @@ async function callClaude(messages) {
   }
 
   if (lower.match(/\bbook\b|\breserve\b/) && !lower.includes('how')) {
-    return "📋 I'd love to help you book! Could you please share:\n\n1️⃣ Destination city\n2️⃣ Preferred travel dates\n3️⃣ Number of passengers (adults/children)\n4️⃣ Preferred cabin class\n\nOnce you share these, I'll prepare a quote and connect you with our team — Pay Small Small options available! ✈️";
+    return "📋 I'd love to help you book! Could you please share:\n\n1️⃣ Destination city\n2️⃣ Preferbg-[#ff0909] travel dates\n3️⃣ Number of passengers (adults/children)\n4️⃣ Preferbg-[#ff0909] cabin class\n\nOnce you share these, I'll prepare a quote and connect you with our team — Pay Small Small options available! ✈️";
   }
 
   // Full Claude API call
@@ -212,7 +212,7 @@ function ChatPanel({ messages, isTyping, inputValue, setInputValue, onSend, onSu
           width: isMobile ? 34 : 38,
           height: isMobile ? 34 : 38,
           borderRadius: '50%',
-          background: '#c0392b',
+          background: '#ff0909',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -244,7 +244,7 @@ function ChatPanel({ messages, isTyping, inputValue, setInputValue, onSend, onSu
               maxWidth: isMobile ? '88%' : '80%',
               padding: isMobile ? '9px 12px' : '10px 14px',
               borderRadius: msg.role === 'user' ? '16px 16px 4px 16px' : '16px 16px 16px 4px',
-              background: msg.role === 'user' ? '#c0392b' : 'rgba(255,255,255,0.12)',
+              background: msg.role === 'user' ? '#ff0909' : 'rgba(255,255,255,0.12)',
               color: '#fff',
               fontSize: isMobile ? 12.5 : 13,
               lineHeight: 1.6,
@@ -260,7 +260,7 @@ function ChatPanel({ messages, isTyping, inputValue, setInputValue, onSend, onSu
             <div style={{ background: 'rgba(255,255,255,0.12)', borderRadius: '16px 16px 16px 4px', padding: '10px 16px', display: 'flex', gap: 4, alignItems: 'center' }}>
               {[0, 1, 2].map(i => (
                 <span key={i} style={{
-                  width: 6, height: 6, borderRadius: '50%', background: '#e06060', display: 'inline-block',
+                  width: 6, height: 6, borderRadius: '50%', background: '#ff0909', display: 'inline-block',
                   animation: 'bounce 1s infinite',
                   animationDelay: `${i * 0.15}s`,
                 }} />
@@ -291,7 +291,7 @@ function ChatPanel({ messages, isTyping, inputValue, setInputValue, onSend, onSu
             transition: 'all 0.2s',
             WebkitTapHighlightColor: 'transparent',
           }}
-            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(192,57,43,0.3)'; e.currentTarget.style.borderColor = '#c0392b'; }}
+            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(192,57,43,0.3)'; e.currentTarget.style.borderColor = '#ff0909'; }}
             onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; }}
           >
             {s.emoji} {s.label}
@@ -325,14 +325,14 @@ function ChatPanel({ messages, isTyping, inputValue, setInputValue, onSend, onSu
           }}
         />
         <button onClick={onSend} style={{
-          background: '#c0392b', border: 'none', borderRadius: 8,
+          background: '#ff0909', border: 'none', borderRadius: 8,
           width: 40, height: 40, cursor: 'pointer', color: '#fff', fontSize: 16,
           display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
           transition: 'background 0.2s',
           WebkitTapHighlightColor: 'transparent',
         }}
           onMouseEnter={e => e.currentTarget.style.background = '#a93226'}
-          onMouseLeave={e => e.currentTarget.style.background = '#c0392b'}
+          onMouseLeave={e => e.currentTarget.style.background = '#ff0909'}
         >
           ▶
         </button>
@@ -354,8 +354,18 @@ const RproAI = () => {
   const messagesEndRef = useRef(null);
   const floatEndRef = useRef(null);
 
-  useEffect(() => { messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [messages, isTyping]);
-  useEffect(() => { floatEndRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [floatMessages, floatTyping]);
+  // Prevent scrolling to bottom on initial load
+  useEffect(() => { 
+    if (messages.length > 1) {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }); 
+    }
+  }, [messages, isTyping]);
+  
+  useEffect(() => { 
+    if (floatMessages.length > 1) {
+      floatEndRef.current?.scrollIntoView({ behavior: 'smooth' }); 
+    }
+  }, [floatMessages, floatTyping]);
 
   const sendMessage = async (msgList, setMsgs, input, setInput, setTyping) => {
     if (!input.trim()) return;
@@ -434,8 +444,8 @@ const RproAI = () => {
           {/* Left */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#e06060' }}>R-pro AI</span>
-              <div style={{ width: 32, height: 1.5, background: '#c0392b' }} />
+              <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#ff0909' }}>R-pro AI</span>
+              <div style={{ width: 32, height: 1.5, background: '#ff0909' }} />
             </div>
             <h2 style={{
               fontFamily: "'Playfair Display', serif",
@@ -446,7 +456,7 @@ const RproAI = () => {
               margin: '0 0 16px',
             }}>
               Your Intelligent<br />
-              <em style={{ color: '#db0303', fontStyle: 'italic' }}>Travel Assistant</em>
+              <em style={{ color: '#ff0909', fontStyle: 'italic' }}>Travel Assistant</em>
             </h2>
             <p style={{
               color: 'rgba(255,255,255,0.55)',
@@ -553,7 +563,7 @@ const RproAI = () => {
               background: 'rgba(255,255,255,0.05)',
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <div style={{ width: 32, height: 32, borderRadius: '50%', background: '#c0392b', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 15, flexShrink: 0 }}>✈️</div>
+                <div style={{ width: 32, height: 32, borderRadius: '50%', background: '#ff0909', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 15, flexShrink: 0 }}>✈️</div>
                 <div>
                   <div style={{ color: '#fff', fontWeight: 700, fontSize: 13 }}>R-pro AI</div>
                   <div style={{ fontSize: 10, color: '#4ade80', display: 'flex', alignItems: 'center', gap: 4 }}>
@@ -587,7 +597,7 @@ const RproAI = () => {
                   <div style={{
                     maxWidth: '88%', padding: '8px 12px',
                     borderRadius: msg.role === 'user' ? '14px 14px 4px 14px' : '14px 14px 14px 4px',
-                    background: msg.role === 'user' ? '#c0392b' : 'rgba(255,255,255,0.1)',
+                    background: msg.role === 'user' ? '#ff0909' : 'rgba(255,255,255,0.1)',
                     color: '#fff', fontSize: 12.5, lineHeight: 1.6,
                     wordBreak: 'break-word',
                     whiteSpace: 'pre-wrap',
@@ -599,7 +609,7 @@ const RproAI = () => {
               {floatTyping && (
                 <div style={{ display: 'flex' }}>
                   <div style={{ background: 'rgba(255,255,255,0.1)', borderRadius: '14px 14px 14px 4px', padding: '8px 14px', display: 'flex', gap: 4 }}>
-                    {[0, 1, 2].map(i => <span key={i} style={{ width: 5, height: 5, borderRadius: '50%', background: '#e06060', display: 'inline-block', animation: 'bounce 1s infinite', animationDelay: `${i * 0.15}s` }} />)}
+                    {[0, 1, 2].map(i => <span key={i} style={{ width: 5, height: 5, borderRadius: '50%', background: '#ff0909', display: 'inline-block', animation: 'bounce 1s infinite', animationDelay: `${i * 0.15}s` }} />)}
                   </div>
                 </div>
               )}
@@ -651,7 +661,7 @@ const RproAI = () => {
                 }}
               />
               <button onClick={handleFloatSend} style={{
-                background: '#c0392b', border: 'none', borderRadius: 8,
+                background: '#ff0909', border: 'none', borderRadius: 8,
                 width: 38, height: 38, cursor: 'pointer', color: '#fff', fontSize: 13,
                 display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
                 WebkitTapHighlightColor: 'transparent',
@@ -665,7 +675,7 @@ const RproAI = () => {
           onClick={() => setFloatOpen(o => !o)}
           style={{
             width: 52, height: 52, borderRadius: '50%',
-            background: '#c0392b', border: 'none',
+            background: '#ff0909', border: 'none',
             boxShadow: '0 4px 20px rgba(192,57,43,0.5)',
             cursor: 'pointer', fontSize: 22,
             display: 'flex', alignItems: 'center', justifyContent: 'center',

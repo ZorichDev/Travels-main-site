@@ -30,8 +30,8 @@ const Destinations = () => {
     <>
       <div className="pt-32 pb-20 px-4 bg-gradient-to-br from-navy-800 via-navy-700 to-red-800">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="text-[#db0303] text-xs font-bold tracking-wider mb-3">Destinations</div>
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-white">Explore the<br /><span className="text-[#db0303] italic">World With Us</span></h1>
+          <div className="text-[#ff0909] text-xs font-bold tracking-wider mb-3">Destinations</div>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold text-white">Explore the<br /><span className="text-[#ff0909] italic">World With Us</span></h1>
           <p className="text-white/70 text-xl mt-4">From Lagos to London, Abuja to Accra — live prices, visa requirements and curated packages for every destination we serve.</p>
         </div>
       </div>
@@ -61,8 +61,8 @@ const Destinations = () => {
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">{d.desc}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="text-xs px-2 py-1 rounded-full bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-[#db0303]">Flights from {d.flight}</span>
-                    <span className="text-xs px-2 py-1 rounded-full bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-[#db0303]">Visa from {d.visa}</span>
+                    <span className="text-xs px-2 py-1 rounded-full bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-[#ff0909]">Flights from {d.flight}</span>
+                    <span className="text-xs px-2 py-1 rounded-full bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-[#ff0909]">Visa from {d.visa}</span>
                     {d.hotel && <span className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-navy-800 text-gray-600 dark:text-gray-400">Hotels from {d.hotel}</span>}
                   </div>
                   <button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-bold text-sm uppercase tracking-wide transition">Book {d.name} Trip →</button>

@@ -192,7 +192,7 @@ const ServicesPreview = () => {
         }}
       >
         <div style={{ fontSize: '40px', marginBottom: '20px', lineHeight: 1 }}>{service.emoji}</div>
-        <h3 style={{ fontFamily: "'Georgia', serif", fontSize: '18px', fontWeight: '700', color: '#c0392b', marginBottom: '12px', lineHeight: '1.3' }}>
+        <h3 style={{ fontFamily: "'Georgia', serif", fontSize: '18px', fontWeight: '700', color: '#ff0909', marginBottom: '12px', lineHeight: '1.3' }}>
           {service.title}
         </h3>
         <p style={{ fontSize: '14px', color: 'var(--sp-body)', lineHeight: '1.6', marginBottom: '20px', flexGrow: 1 }}>
@@ -283,12 +283,12 @@ const ServicesPreview = () => {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ marginBottom: '48px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-              <span style={{ color: '#c0392b', fontSize: '11px', fontWeight: '800', letterSpacing: '0.12em', textTransform: 'uppercase' }}>WHAT WE OFFER</span>
-              <div style={{ width: '32px', height: '1px', background: '#c0392b' }} />
+              <span style={{ color: '#ff0909', fontSize: '11px', fontWeight: '800', letterSpacing: '0.12em', textTransform: 'uppercase' }}>WHAT WE OFFER</span>
+              <div style={{ width: '32px', height: '1px', background: '#ff0909' }} />
             </div>
             <h2 style={{ fontFamily: "'Georgia', serif", fontSize: isMobile ? '36px' : '52px', fontWeight: '900', color: 'var(--sp-heading)', lineHeight: '1.1', margin: '0 0 16px 0' }}>
               Full-Spectrum<br />
-              <span style={{ color: '#c0392b', fontStyle: 'italic' }}>Travel Services</span>
+              <span style={{ color: '#ff0909', fontStyle: 'italic' }}>Travel Services</span>
             </h2>
             <p style={{ fontSize: '15px', color: 'var(--sp-muted)', maxWidth: '480px', lineHeight: '1.6' }}>
               Everything from your visa to your hospital bed — all under one Pan-African roof.
@@ -307,11 +307,11 @@ const ServicesPreview = () => {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ marginBottom: '40px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-              <span style={{ color: '#c0392b', fontSize: '11px', fontWeight: '800', letterSpacing: '0.12em', textTransform: 'uppercase' }}>TOP DESTINATIONS</span>
-              <div style={{ width: '32px', height: '1px', background: '#c0392b' }} />
+              <span style={{ color: '#ff0909', fontSize: '11px', fontWeight: '800', letterSpacing: '0.12em', textTransform: 'uppercase' }}>TOP DESTINATIONS</span>
+              <div style={{ width: '32px', height: '1px', background: '#ff0909' }} />
             </div>
             <h2 style={{ fontFamily: "'Georgia', serif", fontSize: isMobile ? '36px' : '52px', fontWeight: '900', color: 'var(--sp-heading)', lineHeight: '1.1', margin: '0 0 16px 0' }}>
-              Popular <span style={{ color: '#c0392b', fontStyle: 'italic' }}>Destinations</span>
+              Popular <span style={{ color: '#ff0909', fontStyle: 'italic' }}>Destinations</span>
             </h2>
             <p style={{ fontSize: '15px', color: 'var(--sp-muted)', maxWidth: '480px', lineHeight: '1.6', margin: 0 }}>
               Pre-filled searches, live visa prices, and live flight prices — click any destination to book.
@@ -323,9 +323,9 @@ const ServicesPreview = () => {
           <div style={{ textAlign: 'center', marginTop: '40px' }}>
             <Link
               to="/destinations"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', border: '1.5px solid #c0392b', color: '#c0392b', padding: '12px 32px', borderRadius: '6px', fontSize: '13px', fontWeight: '700', letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', transition: 'background 0.2s ease, color 0.2s ease' }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#c0392b'; e.currentTarget.style.color = '#fff'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#c0392b'; }}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', border: '1.5px solid #ff0909', color: '#ff0909', padding: '12px 32px', borderRadius: '6px', fontSize: '13px', fontWeight: '700', letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', transition: 'background 0.2s ease, color 0.2s ease' }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#ff0909'; e.currentTarget.style.color = '#fff'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#ff0909'; }}
             >
               VIEW ALL DESTINATIONS →
             </Link>

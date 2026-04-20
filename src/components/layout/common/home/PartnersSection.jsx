@@ -8,9 +8,9 @@ const darkModeStyles = `
     --ps-card-border: #d0d8e4;
     --ps-partner-text: #1a2b3c;
     --ps-airline-text: #3a4a5a;
-    --ps-section-border: #c0392b;
+    --ps-section-border: #ff0909;
     --ps-stat-bg: #0d1e30;
-    --ps-stat-num: #e06060;
+    --ps-stat-num: #ff0909;
     --ps-stat-label: rgba(255,255,255,0.55);
     --ps-stat-sub: rgba(255,255,255,0.35);
   }
@@ -21,9 +21,9 @@ const darkModeStyles = `
     --ps-card-border: rgba(255,255,255,0.08);
     --ps-partner-text: #cbd5e1;
     --ps-airline-text: #94a3b8;
-    --ps-section-border: #c0392b;
+    --ps-section-border: #ff0909;
     --ps-stat-bg: #1e2d42;
-    --ps-stat-num: #e06060;
+    --ps-stat-num: #ff0909;
     --ps-stat-label: rgba(255,255,255,0.45);
     --ps-stat-sub: rgba(255,255,255,0.25);
   }
@@ -34,9 +34,9 @@ const trustedPartners = [
   { name: 'NANTA', accent: null },
   { name: 'Amadeus IT Group', accent: null },
   { name: 'NCAA', accent: null },
-  { name: 'Emirates', accent: 'red' },
-  { name: 'Qatar Airways', accent: 'red' },
-  { name: 'British Airways', accent: 'red' },
+  { name: 'Emirates', accent: 'bg-[#ff0909]' },
+  { name: 'Qatar Airways', accent: 'bg-[#ff0909]' },
+  { name: 'British Airways', accent: 'bg-[#ff0909]' },
   { name: 'Turkish Airlines', accent: null },
   { name: 'Ethiopian Airlines', accent: null },
   { name: 'Air Peace', accent: null },
@@ -54,13 +54,13 @@ const popularAirlines = [
 
 const accentBorder = {
   navy: '3px solid #0d1e30',
-  red: '3px solid #c0392b',
+  'bg-[#ff0909]': '3px solid #ff0909',
   green: '3px solid #27ae60',
 };
 
 const accentBorderDark = {
   navy: '3px solid #4a7fa5',
-  red: '3px solid #c0392b',
+  'bg-[#ff0909]': '3px solid #ff0909',
   green: '3px solid #27ae60',
 };
 
@@ -88,14 +88,14 @@ const PartnersSection = () => {
             {/* Heading */}
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#c0392b' }}>
+                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#ff0909' }}>
                   Our Network
                 </span>
-                <div style={{ width: 36, height: 1.5, background: '#c0392b' }} />
+                <div style={{ width: 36, height: 1.5, background: '#ff0909' }} />
               </div>
               <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ps-heading)', lineHeight: 1.15, margin: 0 }}>
                 Trusted Partners &<br />
-                <em style={{ color: '#c0392b', fontStyle: 'italic' }}>Global Airlines</em>
+                <em style={{ color: '#ff0909', fontStyle: 'italic' }}>Global Airlines</em>
               </h2>
             </div>
 
@@ -125,8 +125,8 @@ const PartnersSection = () => {
 
             {/* Trusted Partners */}
             <div>
-              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#c0392b', marginBottom: 14, paddingBottom: 10, borderBottom: '1px solid var(--ps-section-border)' }}>
-                Trusted Partners &amp; Accreditations
+              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#ff0909', marginBottom: 14, paddingBottom: 10, borderBottom: '1px solid var(--ps-section-border)' }}>
+                Trusted Partners &amp; Accbg-[#ff0909]itations
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {trustedPartners.map((p, i) => (
@@ -149,7 +149,7 @@ const PartnersSection = () => {
 
             {/* Popular Airlines */}
             <div>
-              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#c0392b', marginBottom: 14, paddingBottom: 10, borderBottom: '1px solid var(--ps-section-border)' }}>
+              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#ff0909', marginBottom: 14, paddingBottom: 10, borderBottom: '1px solid var(--ps-section-border)' }}>
                 Popular Airlines We Book
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
@@ -157,7 +157,7 @@ const PartnersSection = () => {
                   <span key={i} style={{
                     fontSize: 12,
                     fontWeight: airline === 'and many more...' ? 600 : 400,
-                    color: airline === 'and many more...' ? '#c0392b' : 'var(--ps-airline-text)',
+                    color: airline === 'and many more...' ? '#ff0909' : 'var(--ps-airline-text)',
                     background: 'var(--ps-card-bg)',
                     border: '1px solid var(--ps-card-border)',
                     borderRadius: 999,

@@ -19,14 +19,14 @@ const Services = () => {
 
   const ServiceCard = ({ service }) => {
     const content = (
-      <div className="group bg-white dark:bg-navy-900 border border-gray-200 dark:border-white/10 rounded-xl p-6 cursor-pointer transition hover:-translate-y-1 hover:shadow-xl hover:border-red-500/30 relative overflow-hidden">
-        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-600 scale-x-0 group-hover:scale-x-100 transition origin-left" />
+      <div className="group bg-white dark:bg-navy-900 border border-gray-200 dark:border-white/10 rounded-xl p-6 cursor-pointer transition hover:-translate-y-1 hover:shadow-xl hover:border-bg-[#ff0909]-500/30 relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-bg-[#ff0909]-600 scale-x-0 group-hover:scale-x-100 transition origin-left" />
         <div className="text-gray-800 dark:text-white mb-4">{service.icon}</div>
         <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-2">{service.title}</h3>
         <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{service.desc}</p>
         <div className="flex flex-wrap gap-2">
           {service.tags.map(t => (
-            <span key={t} className="text-xs px-2 py-1 rounded-full bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-[#db0303] border border-red-200 dark:border-red-800">{t}</span>
+            <span key={t} className="text-xs px-2 py-1 rounded-full bg-bg-[#ff0909]-50 dark:bg-bg-[#ff0909]-900/20 text-bg-[#ff0909]-700 dark:text-[#ff0909] border border-bg-[#ff0909]-200 dark:border-bg-[#ff0909]-800">{t}</span>
           ))}
         </div>
       </div>
@@ -40,18 +40,18 @@ const Services = () => {
 
   return (
     <>
-      <div className="pt-32 pb-20 px-4 bg-gradient-to-br from-navy-800 via-navy-700 to-red-800">
+      <div className="pt-32 pb-20 px-4 bg-gradient-to-br from-navy-800 via-navy-700 to-bg-[#ff0909]-800">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="text-[#db0303] text-xs font-bold tracking-wider mb-3">Our Services</div>
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-white">Everything You Need,<br /><span className="text-[#db0303] italic">One Platform</span></h1>
+          <div className="text-[#ff0909] text-xs font-bold tracking-wider mb-3">Our Services</div>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold text-white">Everything You Need,<br /><span className="text-[#ff0909] italic">One Platform</span></h1>
           <p className="text-white/70 text-xl mt-4">From your first visa to your final boarding pass — R-Pro Travels is the only travel partner you'll ever need in Africa.</p>
         </div>
       </div>
       <div className="py-20 px-4 md:px-12 bg-white dark:bg-navy-950">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
-            <div className="text-red-600 text-xs font-bold tracking-wider mb-3 flex items-center gap-2">Full Service Suite <span className="w-10 h-px bg-red-600/50" /></div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">All Our <span className="text-red-600 italic">Services</span></h2>
+            <div className="text-bg-[#ff0909]-600 text-xs font-bold tracking-wider mb-3 flex items-center gap-2">Full Service Suite <span className="w-10 h-px bg-bg-[#ff0909]-600/50" /></div>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">All Our <span className="text-bg-[#ff0909]-600 italic">Services</span></h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-xl mt-3">Click any service to explore full details, pricing and how to get started.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">

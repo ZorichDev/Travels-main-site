@@ -31,8 +31,8 @@ const Blog = () => {
     <>
       <div className="pt-32 pb-20 px-4 bg-gradient-to-br from-navy-800 via-navy-700 to-red-800">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="text-[#db0303] text-xs font-bold tracking-wider mb-3">Travel Blog</div>
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-white">Insights, Tips &<br /><span className="text-[#db0303] italic">Travel Guides</span></h1>
+          <div className="text-[#ff0909] text-xs font-bold tracking-wider mb-3">Travel Blog</div>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold text-white">Insights, Tips &<br /><span className="text-[#ff0909] italic">Travel Guides</span></h1>
           <p className="text-white/70 text-xl mt-4">Expert advice on visas, medical tourism, destinations and travel hacks for the discerning African traveller.</p>
         </div>
       </div>
@@ -76,7 +76,7 @@ const Blog = () => {
 
           {/* Newsletter */}
           <div className="bg-gradient-to-r from-navy-800 to-red-800 rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-2">Never Miss a <span className="text-[#db0303] italic">Travel Deal</span></h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-2">Never Miss a <span className="text-[#ff0909] italic">Travel Deal</span></h2>
             <p className="text-white/70 max-w-md mx-auto mb-6">Visa updates, flight deals, medical tourism news and exclusive R-Pro Travels offers — every week.</p>
             <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Your email address" className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-red-500" required />

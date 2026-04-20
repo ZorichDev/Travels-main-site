@@ -9,7 +9,7 @@ const SearchBanner = () => {
           <p className="text-white/60 text-sm">Compare flights, hotels, packages & more — with Pay Small Small from ₦45,000 deposit</p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <a href="https://rprotravels.com" target="_blank" className="bg-red-600 hover:bg-red-700 text-white px-5 py-3 rounded font-bold text-sm uppercase tracking-wide transition">✈️ Search Flights</a>
+          <a href="https://rprotravels.com" target="_blank" className="bg-bg-[#ff0909]-600 hover:bg-bg-[#ff0909]-700 text-white px-5 py-3 rounded font-bold text-sm uppercase tracking-wide transition">✈️ Search Flights</a>
           <a href="https://rprotravels.com" target="_blank" className="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-3 rounded font-bold text-sm uppercase tracking-wide transition">🏨 Book Hotels</a>
           <a href="https://rprotravels.com" target="_blank" className="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-3 rounded font-bold text-sm uppercase tracking-wide transition">🌍 Holiday Packages</a>
         </div>

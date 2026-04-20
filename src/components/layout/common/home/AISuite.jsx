@@ -53,16 +53,16 @@ const AISuite = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-8 h-px bg-red-600"></div>
-            <span className="text-red-600 text-xs font-bold tracking-wider uppercase">AI Suite</span>
-            <div className="w-8 h-px bg-red-600"></div>
+            <div className="w-8 h-px bg-bg-[#ff0909]-600"></div>
+            <span className="text-bg-[#ff0909]-600 text-xs font-bold tracking-wider uppercase">AI Suite</span>
+            <div className="w-8 h-px bg-bg-[#ff0909]-600"></div>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
             6 Live AI Tools<br />
-            Built <span className="text-red-600 italic">For You</span>
+            Built <span className="text-bg-[#ff0909]-600 italic">For You</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
-            {/* Powered by Claude AI — instant answers on visas, costs, documents and destinations. */}
+            {/* Powebg-[#ff0909] by Claude AI — instant answers on visas, costs, documents and destinations. */}
           </p>
         </div>
 
@@ -71,24 +71,24 @@ const AISuite = () => {
           {tools.map((tool, idx) => (
             <div 
               key={idx} 
-              className="group bg-white dark:bg-navy-900 border border-gray-200 dark:border-white/10 rounded-xl p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-red-500/30 relative overflow-hidden cursor-pointer"
+              className="group bg-white dark:bg-navy-900 border border-gray-200 dark:border-white/10 rounded-xl p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-bg-[#ff0909]-500/30 relative overflow-hidden cursor-pointer"
             >
-              {/* Red accent line at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              {/* bg-[#ff0909] accent line at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-bg-[#ff0909]-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               
               {/* Live AI Badge */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-50 dark:bg-red-900/20 text-red-600 text-[11px] font-bold tracking-wider mb-5">
-                <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-bg-[#ff0909]-50 dark:bg-bg-[#ff0909]-900/20 text-bg-[#ff0909]-600 text-[11px] font-bold tracking-wider mb-5">
+                <div className="w-1.5 h-1.5 rounded-full bg-bg-[#ff0909]-500 animate-pulse" />
                 LIVE AI
               </div>
               
               {/* Icon with hover effect */}
-              <div className="text-red-600 dark:text-red-500 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+              <div className="text-bg-[#ff0909]-600 dark:text-bg-[#ff0909]-500 mb-4 transform group-hover:scale-110 transition-transform duration-300">
                 {tool.icon}
               </div>
               
               {/* Title */}
-              <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-red-600 transition-colors">
+              <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-bg-[#ff0909]-600 transition-colors">
                 {tool.title}
               </h3>
               
@@ -98,7 +98,7 @@ const AISuite = () => {
               </p>
               
               {/* Action Button */}
-              <button className="text-red-600 text-xs font-bold uppercase tracking-wide flex items-center gap-1.5 group-hover:gap-3 transition-all duration-300 group-hover:text-red-700">
+              <button className="text-bg-[#ff0909]-600 text-xs font-bold uppercase tracking-wide flex items-center gap-1.5 group-hover:gap-3 transition-all duration-300 group-hover:text-bg-[#ff0909]-700">
                 {tool.action}
                 <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </button>
@@ -109,10 +109,10 @@ const AISuite = () => {
         {/* Decorative Element */}
         <div className="text-center mt-12">
           <div className="inline-flex items-center gap-2 text-gray-400 dark:text-gray-600 text-sm">
-            <span className="w-12 h-px bg-gradient-to-r from-transparent to-red-600"></span>
-            <span className="text-red-600">✦</span>
-            <span className="text-red-600">✦</span>
-            <span className="w-12 h-px bg-gradient-to-l from-transparent to-red-600"></span>
+            <span className="w-12 h-px bg-gradient-to-r from-transparent to-bg-[#ff0909]-600"></span>
+            <span className="text-bg-[#ff0909]-600">✦</span>
+            <span className="text-bg-[#ff0909]-600">✦</span>
+            <span className="w-12 h-px bg-gradient-to-l from-transparent to-bg-[#ff0909]-600"></span>
           </div>
         </div>
       </div>

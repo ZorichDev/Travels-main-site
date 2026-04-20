@@ -63,7 +63,7 @@ function App() {
           {/* Scroll to top button */}
           <button
             onClick={scrollToTop}
-            className={`fixed bottom-24 right-6 z-50 w-10 h-10 rounded bg-navy-700 dark:bg-navy-800 text-red-500 border border-red-500/50 flex items-center justify-center transition-all duration-300 ${
+            className={`fixed bottom-24 right-6 z-50 w-10 h-10 rounded bg-navy-700 dark:bg-navy-800 text-bg-[#ff0909]-500 border border-bg-[#ff0909]-500/50 flex items-center justify-center transition-all duration-300 ${
               scrollTopVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
             }`}
           >

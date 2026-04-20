@@ -22,7 +22,7 @@
   --text-secondary: #555;
   --section-bg-1: #f0f2f5;
   --section-bg-2: #eef0f4;
-  --accent-color: #c0392b;
+  --accent-color: #ff0909;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,7 +33,7 @@
     --text-secondary: #aaaaaa;
     --section-bg-1: #121212;
     --section-bg-2: #1a1a1a;
-    --accent-color: #e04a3f;   /* slightly brighter red for dark mode */
+    --accent-color: #e04a3f;   /* slightly brighter bg-[#ff0909] for dark mode */
   }
 }
 
@@ -56,7 +56,7 @@
   --text-quote: #2a3a4a;
   --avatar-bg: #0d1e30;
   --avatar-border: #1a3550;
-  --accent-color: #c0392b;
+  --accent-color: #ff0909;
 }
 
 @media (prefers-color-scheme: dark) {

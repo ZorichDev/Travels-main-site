@@ -82,7 +82,7 @@ const Avatar = ({ name }) => (
 const Stars = () => (
   <div style={{ display: 'flex', gap: 2, marginBottom: 14 }}>
     {[...Array(5)].map((_, i) => (
-      <span key={i} style={{ color: '#c0392b', fontSize: 14 }}>★</span>
+      <span key={i} style={{ color: '#ff0909', fontSize: 14 }}>★</span>
     ))}
   </div>
 );
@@ -118,11 +118,11 @@ const Testimonials = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
               <span style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.15em',
-                textTransform: 'uppercase', color: '#c0392b',
+                textTransform: 'uppercase', color: '#ff0909',
               }}>
                 Client Stories
               </span>
-              <div style={{ width: 36, height: 1.5, background: '#c0392b' }} />
+              <div style={{ width: 36, height: 1.5, background: '#ff0909' }} />
             </div>
             <h2 style={{
               fontFamily: "'Playfair Display', serif",
@@ -132,7 +132,7 @@ const Testimonials = () => {
               lineHeight: 1.1,
               margin: '0 0 14px',
             }}>
-              Trusted by <em style={{ color: '#c0392b', fontStyle: 'italic' }}>Thousands</em>
+              Trusted by <em style={{ color: '#ff0909', fontStyle: 'italic' }}>Thousands</em>
             </h2>
             <p style={{
               color: 'var(--tm-subtext)', fontSize: '0.95rem', fontWeight: 400,

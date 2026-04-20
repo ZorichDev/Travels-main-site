@@ -4,7 +4,7 @@ import udoImage from './../assets/image/udo.jpg';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    R-Pro Travels & Tours — About Us Page
-   Matches the Contact page: navy-800/700/red-800 hero, white cards, red accents
+   Matches the Contact page: navy-800/700/bg-[#ff0909]-800 hero, white cards, bg-[#ff0909] accents
    ───────────────────────────────────────────────────────────────────────────── */
 
 const STATS = [
@@ -25,7 +25,7 @@ const VALUES = [
     icon: '🌍',
     title: 'Global Reach, Local Heart',
     body:
-      'Headquartered in Lagos, we combine on-the-ground knowledge of Nigeria\'s travel landscape with a network spanning 40+ countries across Europe, Asia, and the Americas.',
+      'Headquartebg-[#ff0909] in Lagos, we combine on-the-ground knowledge of Nigeria\'s travel landscape with a network spanning 40+ countries across Europe, Asia, and the Americas.',
   },
   {
     icon: '🔒',
@@ -144,21 +144,21 @@ export default function About() {
         </div>
 
         {/* Dark gradient overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-800/70 via-navy-700/70 to-red-800/70 z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-800/70 via-navy-700/70 to-bg-[#ff0909]-800/70 z-0"></div>
 
         {/* Decorative blobs */}
         <div className="absolute inset-0 pointer-events-none z-0">
-          <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-red-600/10 blur-3xl" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-bg-[#ff0909]-600/10 blur-3xl" />
           <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white/5 blur-2xl" />
         </div>
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="text-[#db0303] text-xs font-bold tracking-wider mb-3">About R-Pro</div>
+            <div className="text-[#ff0909] text-xs font-bold tracking-wider mb-3">About R-Pro</div>
             <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight">
               Nigeria's Most Trusted<br />
-              <span className="text-[#db0303] italic">Travel Partner</span>
+              <span className="text-[#ff0909] italic">Travel Partner</span>
             </h1>
             <p className="text-white/70 text-base sm:text-lg md:text-xl mt-4 sm:mt-6 max-w-2xl mx-auto px-2">
               Since 2013, R-Pro Travels and Tours has been getting Nigerians to their destinations — 
@@ -170,7 +170,7 @@ export default function About() {
                 href="https://rprotravels.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#db0303] hover:bg-red-700 text-white px-5 sm:px-8 py-2.5 sm:py-3 rounded-lg font-bold uppercase tracking-wide transition text-sm sm:text-base"
+                className="bg-[#ff0909] hover:bg-bg-[#ff0909]-700 text-white px-5 sm:px-8 py-2.5 sm:py-3 rounded-lg font-bold uppercase tracking-wide transition text-sm sm:text-base"
               >
                 Work With Us
               </a>
@@ -186,7 +186,7 @@ export default function About() {
       </div>
 
       {/* ── STATS BAND ── */}
-      <div className="bg-[#db0303] py-10 px-4">
+      <div className="bg-[#ff0909] py-10 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
           {STATS.map((s) => (
             <div key={s.label}>
@@ -210,7 +210,7 @@ export default function About() {
                 alt="Airplane wing over clouds — representing global travel"
                 className="rounded-2xl w-full h-64 md:h-80 object-cover shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-3 md:-bottom-8 md:-right-4 bg-[#db0303] text-white rounded-xl p-4 md:p-5 shadow-xl max-w-[200px] md:max-w-xs">
+              <div className="absolute -bottom-6 -right-3 md:-bottom-8 md:-right-4 bg-[#ff0909] text-white rounded-xl p-4 md:p-5 shadow-xl max-w-[200px] md:max-w-xs">
                 <div className="font-serif text-xl md:text-2xl font-bold">Est. 2013</div>
                 <div className="text-white/80 text-xs md:text-sm mt-1">Over a decade of trusted service from Lagos to the world.</div>
               </div>
@@ -218,12 +218,12 @@ export default function About() {
 
             {/* Story text */}
             <div className="pt-6 md:pt-0">
-              <div className="text-[#db0303] text-xs font-bold tracking-wider mb-3 flex items-center gap-2">
-                <span className="w-10 h-px bg-red-600/50" /> Our Story
+              <div className="text-[#ff0909] text-xs font-bold tracking-wider mb-3 flex items-center gap-2">
+                <span className="w-10 h-px bg-bg-[#ff0909]-600/50" /> Our Story
               </div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Built on a Simple{' '}
-                <span className="text-[#db0303] italic">Principle</span>
+                <span className="text-[#ff0909] italic">Principle</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm md:text-base">
                 R-Pro Travels and Tours was founded in Lagos in 2013 with one conviction: Nigerians 
@@ -248,11 +248,11 @@ export default function About() {
       <section className="py-16 md:py-20 px-4 md:px-12 bg-gray-50 dark:bg-navy-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-12">
-            <div className="text-[#db0303] text-xs font-bold tracking-wider mb-3 flex justify-center items-center gap-2">
-              <span className="w-8 md:w-10 h-px bg-red-600/50" /> Why R-Pro <span className="w-8 md:w-10 h-px bg-red-600/50" />
+            <div className="text-[#ff0909] text-xs font-bold tracking-wider mb-3 flex justify-center items-center gap-2">
+              <span className="w-8 md:w-10 h-px bg-bg-[#ff0909]-600/50" /> Why R-Pro <span className="w-8 md:w-10 h-px bg-bg-[#ff0909]-600/50" />
             </div>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
-              We Work for <span className="text-[#db0303] italic">You</span> — Not the Industry
+              We Work for <span className="text-[#ff0909] italic">You</span> — Not the Industry
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base max-w-2xl mx-auto px-2">
               Most travel and health tourism facilitators earn commissions from airlines, hotels, and hospitals — 
@@ -282,12 +282,12 @@ export default function About() {
       <section className="py-16 md:py-20 px-4 md:px-12 bg-white dark:bg-navy-950">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-12">
-            <div className="text-[#db0303] text-xs font-bold tracking-wider mb-3 flex justify-center items-center gap-2">
-              <span className="w-8 md:w-10 h-px bg-red-600/50" /> What We Do <span className="w-8 md:w-10 h-px bg-red-600/50" />
+            <div className="text-[#ff0909] text-xs font-bold tracking-wider mb-3 flex justify-center items-center gap-2">
+              <span className="w-8 md:w-10 h-px bg-bg-[#ff0909]-600/50" /> What We Do <span className="w-8 md:w-10 h-px bg-bg-[#ff0909]-600/50" />
             </div>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
               Everything You Need,{' '}
-              <span className="text-[#db0303] italic">One Team</span>
+              <span className="text-[#ff0909] italic">One Team</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
               From the moment you decide to travel to the moment you return home, R-Pro covers every step of the journey.
@@ -298,10 +298,10 @@ export default function About() {
             {SERVICES.map((s) => (
               <div
                 key={s.title}
-                className="bg-gray-50 dark:bg-navy-900 rounded-xl p-5 md:p-6 border border-gray-200 dark:border-white/10 group hover:border-[#db0303]/40 transition"
+                className="bg-gray-50 dark:bg-navy-900 rounded-xl p-5 md:p-6 border border-gray-200 dark:border-white/10 group hover:border-[#ff0909]/40 transition"
               >
                 <div className="text-3xl md:text-4xl mb-3 md:mb-4">{s.icon}</div>
-                <div className="font-serif text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-[#db0303] transition">
+                <div className="font-serif text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-[#ff0909] transition">
                   {s.title}
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 text-xs md:text-sm leading-relaxed">{s.body}</div>
@@ -312,17 +312,17 @@ export default function About() {
       </section>
 
       {/* ── HEALTH TOURISM HIGHLIGHT ── */}
-      <section className="py-16 md:py-20 px-4 md:px-12 bg-gradient-to-br from-navy-800 via-navy-700 to-red-800 relative overflow-hidden">
+      <section className="py-16 md:py-20 px-4 md:px-12 bg-gradient-to-br from-navy-800 via-navy-700 to-bg-[#ff0909]-800 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-red-600/10 blur-3xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-bg-[#ff0909]-600/10 blur-3xl" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <div className="text-[#db0303] text-xs font-bold tracking-wider mb-3">Health Tourism</div>
+              <div className="text-[#ff0909] text-xs font-bold tracking-wider mb-3">Health Tourism</div>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 When Health Can't{' '}
-                <span className="text-[#db0303] italic">Wait</span>
+                <span className="text-[#ff0909] italic">Wait</span>
               </h2>
               <p className="text-white/70 text-sm md:text-base mb-6 leading-relaxed">
                 Our Health Tourism Facilitation service gives Nigerian patients access to world-class 
@@ -335,14 +335,14 @@ export default function About() {
                   'Premium — $650 · Cardiac, oncology, neurosurgery',
                   'Elite — $1,000 · Critical emergencies, VIP white-glove'].map((line) => (
                   <div key={line} className="flex items-start gap-2 md:gap-3">
-                    <span className="text-[#db0303] mt-0.5 flex-shrink-0 text-sm md:text-base">✓</span>
+                    <span className="text-[#ff0909] mt-0.5 flex-shrink-0 text-sm md:text-base">✓</span>
                     <span className="text-white/80 text-xs md:text-sm">{line}</span>
                   </div>
                 ))}
               </div>
               <a
                 href="/contact"
-                className="inline-block bg-[#db0303] hover:bg-red-700 text-white px-5 md:px-8 py-2.5 md:py-3 rounded-lg font-bold uppercase tracking-wide transition text-sm md:text-base"
+                className="inline-block bg-[#ff0909] hover:bg-bg-[#ff0909]-700 text-white px-5 md:px-8 py-2.5 md:py-3 rounded-lg font-bold uppercase tracking-wide transition text-sm md:text-base"
               >
                 Explore Health Tourism →
               </a>
@@ -363,12 +363,12 @@ export default function About() {
       <section className="py-16 md:py-20 px-4 md:px-12 bg-white dark:bg-navy-950">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-12">
-            <div className="text-[#db0303] text-xs font-bold tracking-wider mb-3 flex justify-center items-center gap-2">
-              <span className="w-8 md:w-10 h-px bg-red-600/50" /> Our Team <span className="w-8 md:w-10 h-px bg-red-600/50" />
+            <div className="text-[#ff0909] text-xs font-bold tracking-wider mb-3 flex justify-center items-center gap-2">
+              <span className="w-8 md:w-10 h-px bg-bg-[#ff0909]-600/50" /> Our Team <span className="w-8 md:w-10 h-px bg-bg-[#ff0909]-600/50" />
             </div>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
               People Who{' '}
-              <span className="text-[#db0303] italic">Go the Distance</span>
+              <span className="text-[#ff0909] italic">Go the Distance</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base max-w-xl mx-auto">
               Our coordinators are more than agents — they're advocates, problem-solvers, and companions on your journey.
@@ -391,7 +391,7 @@ export default function About() {
                 </div>
                 <div className="p-5 md:p-6">
                   <div className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white">{t.name}</div>
-                  <div className="text-[#db0303] text-xs font-bold tracking-wider mt-1 mb-3">{t.role}</div>
+                  <div className="text-[#ff0909] text-xs font-bold tracking-wider mt-1 mb-3">{t.role}</div>
                 </div>
               </div>
             ))}
@@ -411,10 +411,10 @@ export default function About() {
               />
             </div>
             <div className="order-1 md:order-2">
-              <div className="text-[#db0303] text-xs font-bold tracking-wider mb-3">Headquarters</div>
+              <div className="text-[#ff0909] text-xs font-bold tracking-wider mb-3">Headquarters</div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Based in Lagos,{' '}
-                <span className="text-[#db0303] italic">Serving the World</span>
+                <span className="text-[#ff0909] italic">Serving the World</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-sm md:text-base">
                 Our headquarters in Lekki, Lagos is open Monday to Saturday. Walk-ins are welcome, 
@@ -432,13 +432,13 @@ export default function About() {
               <div className="flex flex-wrap gap-3 md:gap-4">
                 <a
                   href="/contact"
-                  className="bg-[#db0303] hover:bg-red-700 text-white px-5 md:px-8 py-2.5 md:py-3 rounded-lg font-bold uppercase tracking-wide transition text-sm md:text-base"
+                  className="bg-[#ff0909] hover:bg-bg-[#ff0909]-700 text-white px-5 md:px-8 py-2.5 md:py-3 rounded-lg font-bold uppercase tracking-wide transition text-sm md:text-base"
                 >
                   📨 Get in Touch
                 </a>
                 <a
                   href="https://wa.me/2349061993781"
-                  className="border border-gray-300 dark:border-white/20 hover:border-[#db0303] text-gray-900 dark:text-white px-5 md:px-8 py-2.5 md:py-3 rounded-lg font-bold uppercase tracking-wide transition text-sm md:text-base"
+                  className="border border-gray-300 dark:border-white/20 hover:border-[#ff0909] text-gray-900 dark:text-white px-5 md:px-8 py-2.5 md:py-3 rounded-lg font-bold uppercase tracking-wide transition text-sm md:text-base"
                 >
                   💬 WhatsApp Us
                 </a>

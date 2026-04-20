@@ -13,8 +13,8 @@ const DestinationsPreview = () => {
   return (
     <div className="py-20 px-4 md:px-12 bg-gray-100 dark:bg-navy-900/50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-red-600 text-xs font-bold tracking-wider mb-3">here we go</div>
-        <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">village <span className="text-red-600 italic">Destinations</span></h2>
+        <div className="text-bg-[#ff0909]-600 text-xs font-bold tracking-wider mb-3">here we go</div>
+        <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">village <span className="text-bg-[#ff0909]-600 italic">Destinations</span></h2>
         <p className="text-gray-600 dark:text-gray-400 max-w-xl mt-3 mb-12">re-filled searches, live visa prices, and live flight prices — click any destination to book.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {destinations.map(d => (
@@ -24,8 +24,8 @@ const DestinationsPreview = () => {
                 <div className="text-3xl">{d.flag}</div>
                 <div className="font-serif text-2xl font-bold">{d.name}</div>
                 <div className="flex gap-2 mt-2">
-                  <span className="text-xs bg-red-600/30 border border-red-500/50 px-2 py-1 rounded">Flights from {d.flight}</span>
-                  <span className="text-xs bg-red-600/30 border border-red-500/50 px-2 py-1 rounded">Visa from {d.visa}</span>
+                  <span className="text-xs bg-bg-[#ff0909]-600/30 border border-bg-[#ff0909]-500/50 px-2 py-1 rounded">Flights from {d.flight}</span>
+                  <span className="text-xs bg-bg-[#ff0909]-600/30 border border-bg-[#ff0909]-500/50 px-2 py-1 rounded">Visa from {d.visa}</span>
                 </div>
               </div>
             </a>

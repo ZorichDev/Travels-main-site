@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Brand column */}
         <div>
           <div className="font-serif text-2xl font-bold text-white mb-4">
-            R-Pro Travels<span className="text-[#db0303]">.</span>
+            R-Pro Travels<span className="text-[#ff0909]">.</span>
           </div>
           <p className="text-white/60 text-sm leading-relaxed mb-6">
             Africa's most comprehensive travel partner — visa, medical, flights, hotels and AI tools, all in one platform.
@@ -31,7 +31,7 @@ const Footer = () => {
 
         {/* Visa Services */}
         <div>
-          <h4 className="text-[#db0303] text-xs font-bold tracking-widest uppercase mb-5">
+          <h4 className="text-[#ff0909] text-xs font-bold tracking-widest uppercase mb-5">
             Visa Services
           </h4>
           <ul className="space-y-3">
@@ -57,7 +57,7 @@ const Footer = () => {
 
         {/* Travel Services */}
         <div>
-          <h4 className="text-[#db0303] text-xs font-bold tracking-widest uppercase mb-5">
+          <h4 className="text-[#ff0909] text-xs font-bold tracking-widest uppercase mb-5">
             Travel Services
           </h4>
           <ul className="space-y-3">
@@ -92,16 +92,16 @@ const Footer = () => {
 
         {/* Contact Us */}
         <div>
-          <h4 className="text-[#db0303] text-xs font-bold tracking-widest uppercase mb-5">
+          <h4 className="text-[#ff0909] text-xs font-bold tracking-widest uppercase mb-5">
             Contact Us
           </h4>
           <div className="space-y-4">
             <div className="flex items-start gap-3 text-white/60 text-sm">
-              <MapPin size={14} className="mt-0.5 text-[#db0303] shrink-0" />
+              <MapPin size={14} className="mt-0.5 text-[#ff0909] shrink-0" />
               <span>Lagos Office — Victoria Island, Lagos</span>
             </div>
             <div className="flex items-start gap-3 text-white/60 text-sm">
-              <MapPin size={14} className="mt-0.5 text-[#db0303] shrink-0" />
+              <MapPin size={14} className="mt-0.5 text-[#ff0909] shrink-0" />
               <span>Abuja Office — Wuse II, FCT</span>
             </div>
             <div className="flex items-start gap-3 text-white/60 text-sm">

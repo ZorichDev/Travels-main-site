@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-// 🔑 Replace these with your actual EmailJS credentials
+// 🔑 Replace these with your actual EmailJS cbg-[#ff0909]entials
 const EMAILJS_SERVICE_ID = 'your_service_id';
 const EMAILJS_TEMPLATE_ID = 'your_template_id';
 const EMAILJS_PUBLIC_KEY = 'your_public_key';
@@ -51,12 +51,12 @@ const Contact = () => {
 
   return (
     <>
-      <div className="pt-32 pb-20 px-4 bg-gradient-to-br from-navy-800 via-navy-700 to-red-800">
+      <div className="pt-32 pb-20 px-4 bg-gradient-to-br from-navy-800 via-navy-700 to-bg-[#ff0909]-800">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="text-[#db0303] text-xs font-bold tracking-wider mb-3">Contact Us</div>
+          <div className="text-[#ff0909] text-xs font-bold tracking-wider mb-3">Contact Us</div>
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-white">
             Let's Plan Your<br />
-            <span className="text-[#db0303] italic">Journey Together</span>
+            <span className="text-[#ff0909] italic">Journey Together</span>
           </h1>
           <p className="text-white/70 text-xl mt-4">
             Reach our team by WhatsApp, email or visit one of our offices in Lagos, Abuja or Port Harcourt.
@@ -74,15 +74,15 @@ const Contact = () => {
                 <div className="font-bold text-gray-900 dark:text-white text-lg">WhatsApp (Fastest)</div>
                 <div className="text-gray-600 dark:text-gray-400 text-sm">
                   Available 24/7 — response within minutes.<br />
-                  <a href="#" className="text-red-600 hover:underline">0906 199 3781</a>
+                  <a href="#" className="text-bg-[#ff0909]-600 hover:underline">0906 199 3781</a>
                 </div>
               </div>
               <div className="bg-gray-50 dark:bg-navy-900 rounded-xl p-6 border border-gray-200 dark:border-white/10">
                 <div className="text-3xl mb-3">✉️</div>
                 <div className="font-bold text-gray-900 dark:text-white text-lg">Email Us</div>
                 <div className="text-gray-600 dark:text-gray-400 text-sm">
-                  General: <a href="mailto:Customercare@rprogroup.net" className="text-red-600 hover:underline">Customercare@rprogroup.net</a><br />
-                  Corporate: <a href="mailto:corporate@rprotravels.com" className="text-red-600 hover:underline">corporate@rprotravels.com</a>
+                  General: <a href="mailto:Customercare@rprogroup.net" className="text-bg-[#ff0909]-600 hover:underline">Customercare@rprogroup.net</a><br />
+                  Corporate: <a href="mailto:corporate@rprotravels.com" className="text-bg-[#ff0909]-600 hover:underline">corporate@rprotravels.com</a>
                 </div>
               </div>
               <div className="bg-gray-50 dark:bg-navy-900 rounded-xl p-6 border border-gray-200 dark:border-white/10">
@@ -112,7 +112,7 @@ const Contact = () => {
                 </div>
               )}
               {status === 'error' && (
-                <div className="mb-6 p-4 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm font-medium">
+                <div className="mb-6 p-4 rounded-lg bg-bg-[#ff0909]-50 border border-bg-[#ff0909]-200 text-bg-[#ff0909]-700 text-sm font-medium">
                   ❌ Something went wrong. Please try again or WhatsApp us directly.
                 </div>
               )}
@@ -120,24 +120,24 @@ const Contact = () => {
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="block text-xs font-bold text-red-600 tracking-wider mb-1">First Name</label>
+                    <label className="block text-xs font-bold text-bg-[#ff0909]-600 tracking-wider mb-1">First Name</label>
                     <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required className="w-full px-4 py-2 rounded-lg bg-white dark:bg-navy-800 border border-gray-200 dark:border-white/20" />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-red-600 tracking-wider mb-1">Last Name</label>
+                    <label className="block text-xs font-bold text-bg-[#ff0909]-600 tracking-wider mb-1">Last Name</label>
                     <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required className="w-full px-4 py-2 rounded-lg bg-white dark:bg-navy-800 border border-gray-200 dark:border-white/20" />
                   </div>
                 </div>
                 <div className="mb-4">
-                  <label className="block text-xs font-bold text-red-600 tracking-wider mb-1">Email Address</label>
+                  <label className="block text-xs font-bold text-bg-[#ff0909]-600 tracking-wider mb-1">Email Address</label>
                   <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-2 rounded-lg bg-white dark:bg-navy-800 border border-gray-200 dark:border-white/20" />
                 </div>
                 <div className="mb-4">
-                  <label className="block text-xs font-bold text-red-600 tracking-wider mb-1">Phone / WhatsApp</label>
+                  <label className="block text-xs font-bold text-bg-[#ff0909]-600 tracking-wider mb-1">Phone / WhatsApp</label>
                   <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-2 rounded-lg bg-white dark:bg-navy-800 border border-gray-200 dark:border-white/20" />
                 </div>
                 <div className="mb-4">
-                  <label className="block text-xs font-bold text-red-600 tracking-wider mb-1">I Need Help With</label>
+                  <label className="block text-xs font-bold text-bg-[#ff0909]-600 tracking-wider mb-1">I Need Help With</label>
                   <select name="service" value={formData.service} onChange={handleChange} className="w-full px-4 py-2 rounded-lg bg-white dark:bg-navy-800 border border-gray-200 dark:border-white/20">
                     <option value="visa">Visa Application</option>
                     <option value="flight">Flight Booking</option>
@@ -147,14 +147,14 @@ const Contact = () => {
                   </select>
                 </div>
                 <div className="mb-6">
-                  <label className="block text-xs font-bold text-red-600 tracking-wider mb-1">Message</label>
+                  <label className="block text-xs font-bold text-bg-[#ff0909]-600 tracking-wider mb-1">Message</label>
                   <textarea name="message" rows="4" value={formData.message} onChange={handleChange} required className="w-full px-4 py-2 rounded-lg bg-white dark:bg-navy-800 border border-gray-200 dark:border-white/20" placeholder="Tell us about your travel plans, destination, timeline and budget…" />
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 disabled:cursor-not-allowed text-white py-3 rounded-lg font-bold uppercase tracking-wide transition"
+                  className="w-full bg-bg-[#ff0909]-600 hover:bg-bg-[#ff0909]-700 disabled:bg-bg-[#ff0909]-400 disabled:cursor-not-allowed text-white py-3 rounded-lg font-bold uppercase tracking-wide transition"
                 >
                   {status === 'sending' ? '⏳ Sending...' : '📨 Send Message'}
                 </button>
@@ -167,11 +167,11 @@ const Contact = () => {
 
           {/* Offices section — unchanged */}
           <div className="mt-16 text-center">
-            <div className="text-red-600 text-xs font-bold tracking-wider mb-3 flex justify-center items-center gap-2">
-              <span className="w-10 h-px bg-red-600/50" /> Our Offices <span className="w-10 h-px bg-red-600/50" />
+            <div className="text-bg-[#ff0909]-600 text-xs font-bold tracking-wider mb-3 flex justify-center items-center gap-2">
+              <span className="w-10 h-px bg-bg-[#ff0909]-600/50" /> Our Offices <span className="w-10 h-px bg-bg-[#ff0909]-600/50" />
             </div>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
-              Visit Us <span className="text-red-600 italic">In Person</span>
+              Visit Us <span className="text-bg-[#ff0909]-600 italic">In Person</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
               Walk-ins welcome during office hours. Appointment recommended for visa consultations.

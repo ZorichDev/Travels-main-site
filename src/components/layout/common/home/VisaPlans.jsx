@@ -4,7 +4,7 @@ const CheckIcon = () => (
   <svg
     width="15" height="15"
     viewBox="0 0 24 24" fill="none"
-    stroke="#c0392b" strokeWidth="2.5"
+    stroke="#ff0909" strokeWidth="2.5"
     style={{ flexShrink: 0, marginTop: 2 }}
   >
     <path d="M20 6L9 17l-5-5" />
@@ -73,11 +73,11 @@ const VisaPlans = () => {
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-            <div style={{ width: 32, height: 1, background: '#c0392b' }} />
-            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#c0392b' }}>
+            <div style={{ width: 32, height: 1, background: '#ff0909' }} />
+            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#ff0909' }}>
               Visa Plans
             </span>
-            <div style={{ width: 32, height: 1, background: '#c0392b' }} />
+            <div style={{ width: 32, height: 1, background: '#ff0909' }} />
           </div>
           <h2 style={{
             fontFamily: "'Playfair Display', serif",
@@ -87,7 +87,7 @@ const VisaPlans = () => {
             lineHeight: 1.1,
             marginBottom: 14,
           }}>
-            Choose Your <em style={{ color: '#c0392b', fontStyle: 'italic' }}>Visa Plan</em>
+            Choose Your <em style={{ color: '#ff0909', fontStyle: 'italic' }}>Visa Plan</em>
           </h2>
           <p style={{ color: '#8899aa', fontSize: '1rem', fontWeight: 300, maxWidth: 520, margin: '0 auto', lineHeight: 1.7 }}>
             Transparent pricing. Expert facilitation. No hidden fees. Government charges are separate.
@@ -106,7 +106,7 @@ const VisaPlans = () => {
               style={{
                 position: 'relative',
                 background: '#0d1e30',
-                border: plan.popular ? '2px solid #c0392b' : '1px solid rgba(255,255,255,0.08)',
+                border: plan.popular ? '2px solid #ff0909' : '1px solid rgba(255,255,255,0.08)',
                 borderRadius: 16,
                 padding: '28px 24px 24px',
                 boxShadow: plan.popular ? '0 0 30px rgba(192,57,43,0.2)' : 'none',
@@ -127,7 +127,7 @@ const VisaPlans = () => {
                   position: 'absolute',
                   top: -13, left: '50%',
                   transform: 'translateX(-50%)',
-                  background: '#c0392b',
+                  background: '#ff0909',
                   color: '#fff',
                   fontSize: 10, fontWeight: 700,
                   letterSpacing: '0.15em',
@@ -142,7 +142,7 @@ const VisaPlans = () => {
               )}
 
               {/* Plan Label */}
-              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#c0392b', marginBottom: 6 }}>
+              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#ff0909', marginBottom: 6 }}>
                 {plan.name}
               </div>
 
@@ -184,7 +184,7 @@ const VisaPlans = () => {
                   textDecoration: 'none',
                   transition: 'all 0.25s',
                   ...(plan.popular
-                    ? { background: '#c0392b', color: '#fff', boxShadow: '0 4px 16px rgba(192,57,43,0.35)', border: 'none' }
+                    ? { background: '#ff0909', color: '#fff', boxShadow: '0 4px 16px rgba(192,57,43,0.35)', border: 'none' }
                     : { background: 'transparent', color: '#8899aa', border: '2px solid rgba(255,255,255,0.12)' }
                   ),
                 }}
@@ -195,7 +195,7 @@ const VisaPlans = () => {
                 }}
                 onMouseLeave={e => {
                   if (plan.popular) {
-                    e.currentTarget.style.background = '#c0392b';
+                    e.currentTarget.style.background = '#ff0909';
                     e.currentTarget.style.color = '#fff';
                     e.currentTarget.style.borderColor = 'transparent';
                   } else {
